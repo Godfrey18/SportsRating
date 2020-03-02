@@ -1,0 +1,26 @@
+
+<div class ="container container-list-show">
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card text-white bg-warning" style="width: 18rem;">
+			  <%= image_tag("football.jpg", :alt => "rss feed",class:"card-img-top") %>
+			 <div class="card-body">
+
+			      <h5 class="card-title">
+			      	<span>SportName:<%=@sport.name%>
+			      	</span></h5>
+			      <span><p class="card-text">Total Players:<%=@sport.no_players%></p></span>
+			      <span><p class="card-text">Discription:<%=@sport.discription%></p></span>
+			      <hr>
+			      <span><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></span>
+			      <hr>
+			      
+			      <%= link_to "Edit", edit_sport_path(@sport),class:"btn btn-success"%>
+			      <%= link_to "Delete", sport_path(@sport),method: :delete,
+			      data: { confirm: "Are you sure you want to delete the Sport?"},class:"btn btn-success"%>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

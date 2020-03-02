@@ -1,0 +1,17 @@
+
+<div class="card-deck  container-list">
+	<%@sports.each do |sport| %>
+  <div class="card card text-white bg-warning">
+    <%= image_tag("football.jpg", :alt => "rss feed",class:"card-img-top") %>
+    <div class="card-body">
+      <h5 class="card-title"><%=sport.name%></h5>
+      <p class="card-text"><%=sport.no_players%></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      
+      <%= link_to "View", sport_path(sport),class:"btn btn-success"%>
+      <%= link_to "Vote", "",class:"btn btn-success"%>
+    </div>
+
+  </div>
+  <% end %>
+</div>
